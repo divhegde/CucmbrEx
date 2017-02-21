@@ -228,3 +228,20 @@ end
 Then(/^I print all the text contents in the page using html tag$/) do
   puts browser.html
 end
+
+Then (/^I hover over the text "([^"]*)"$/) do |arg|
+  browser.span(:text => arg).when_present.hover
+end
+
+Then (/^I print the subcategories of class "([^"]*)"$/) do |classname|
+  browser.div(:class => classname).spans(:class => "nav-text").each do |span|
+    puts span.text
+  end
+end
+
+
+Then (/^I print the subcategories of span "([^"]*)"$/) do |spanname|
+  browser.spans(:class => spanname).each do |span|
+    puts span.text
+  end
+end

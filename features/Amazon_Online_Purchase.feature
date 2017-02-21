@@ -29,4 +29,37 @@ Feature: Amazon Online purchase using pickup store-Happy path
     Then I wait for the Page to load
     Then I assert for the text "Pickup Locations Search Results" in page
 
-    
+Scenario: Amazon - hover over the SHOP BY CATEGORY
+    Given I enter "www.amazon.in" in broswer
+    Then I wait for the Page to load
+    Then I hover over the text "Category"
+    Then I hover over the text "Amazon Prime Video"
+    Then I print the subcategories of class "nav-template nav-subcat nav-tpl-itemList nav-colcount-2 nav-colcount-0"
+    Then I hover over the text "Kindle eReaders & eBooks"
+    Then I print the subcategories of class "nav-column nav-column-first"
+    Then I hover over the text "Amazon Apps"
+    Then I print the subcategories of span "nav-text"
+    Then I hover over the text "Books"
+    Then I print the subcategories of span "nav-text"
+    Then I hover over the text "Movies, Music & Video Games"
+    Then I print the subcategories of span "nav-text"
+    Then I hover over the text "Mobiles & Tablets"
+    Then I print the subcategories of span "nav-text"
+    Then I hover over the text "Computers & Accessories"
+    Then I print the subcategories of span "nav-text"
+    Then I hover over the text "TV, Audio & Cameras"
+    Then I print the subcategories of span "nav-text"
+    Then I hover over the text "Home, Kitchen & Pets"
+    Then I print the subcategories of span "nav-text"
+     Then I hover over the text "Toys & Baby Products"
+    Then I print the subcategories of span "nav-text"
+     Then I hover over the text "Sports,Fitness & Outdoors"
+    Then I print the subcategories of span "nav-text"
+     Then I hover over the text "Beauty,Health & Groceries"
+    Then I print the subcategories of span "nav-text"
+     Then I hover over the text "Clothing and Accessories"
+    Then I print the subcategories of span "nav-text"
+     Then I hover over the text "Jewellery, Watches &  Eyewear"
+    Then I print the subcategories of span "nav-text"
+     Then I hover over the text "Handbags & Luggage"
+    Then I print the subcategories of span "nav-text"
