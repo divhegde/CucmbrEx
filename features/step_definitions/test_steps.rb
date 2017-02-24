@@ -234,7 +234,7 @@ Then (/^I hover over the text "([^"]*)"$/) do |arg|
 end
 
 Then (/^I print the subcategories of class "([^"]*)"$/) do |classname|
-  browser.div(:class => classname).spans(:class => "nav-text").each do |span|
+  browser.div(:class =>"nav-subcats").spans(:class => "nav-text").each do |span|
     puts span.text
   end
 end
