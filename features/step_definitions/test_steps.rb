@@ -8,6 +8,9 @@ require 'watir-scroll'
 caps = Selenium::WebDriver::Remote::Capabilities.chrome("chromeOptions" => {'detach' => false})
 browser = Watir::Browser.new :chrome
 
+#For incognito
+#browser= Watir::Browser.new :chrome, switches: ['--incognito']
+
 Given(/^I enter "([^"]*)" in broswer$/) do |browser_url|
   browser.goto(browser_url)
 end
